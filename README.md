@@ -2,7 +2,7 @@
   <img width="100" height="100" alt="smartfit (2)" style="float:left" src="https://github.com/user-attachments/assets/77445f60-ae07-4fa9-a0d6-306957aabdfd" />
 </p>
 
-<h1 align="center">Fitness Tracker & Meal Planner</h1>
+<h1 align="center">Smart fitness routine and meal planner</h1>
 
 
 
