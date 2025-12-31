@@ -51,7 +51,7 @@ A **full-stack fitness management web application** designed to help users track
 
 ```
 
-CAPSTONE PROJECT
+Smart fitness routine and meal planner
 │
 ├── backend
 │   ├── src
