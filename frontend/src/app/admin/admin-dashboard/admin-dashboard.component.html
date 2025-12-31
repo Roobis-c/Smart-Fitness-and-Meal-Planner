@@ -1,0 +1,40 @@
+
+<div class="admin-dashboard">
+  <div class="dashboard-header">
+    <h2>User Management</h2>
+    <button class="btn-primary" (click)="addUser()"><mat-icon>add</mat-icon> Add User</button>
+  </div>
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>Goal</th>
+          <th>Created</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td class="user-name">{{ user.name }}</td>
+          <td>{{ user.height }} cm</td>
+          <td>{{ user.weight }} kg</td>
+
+          <td>
+            <span class="badge" [ngClass]="user.goal">
+              {{ user.goal | titlecase }}
+            </span>
+          </td>
+          <td>{{ user.created_at | date:'dd MMM yyyy, hh:mm a' }}</td>
+          <td class="actions">
+            <button class="btn-view" (click)="openUser(user.id)">View</button>
+            <button class="btn-delete" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,114 @@
+.admin-add-user {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.page-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+.page-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #003c46;
+}
+.page-header p {
+  font-size: 14px;
+  color: #5f7d84;
+}
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+.step {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #d9e7ea;
+  color: #5f7d84;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.step.active {
+  background: #005461;
+  color: #ffffff;
+}
+.card {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 18px;
+  margin-bottom: 26px;
+  box-shadow: 0 16px 32px rgba(0, 84, 97, 0.15);
+}
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #003c46;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+input,
+select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #cfe3e7;
+  font-size: 14px;
+  color: #003c46;
+  background: #ffffff;
+}
+
+input::placeholder {
+  color: #7fa3aa;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #005461;
+  box-shadow: 0 0 0 3px rgba(0, 84, 97, 0.2);
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 14px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.backbtn{
+  width: auto;
+  margin: 15px;
+  background: #5682B1 ;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  font-weight: 100;
+  border-radius: 30px;
+  cursor: pointer;
+  gap: 6px;}
+.btn-primary {
+  background: linear-gradient(135deg, #007c91, #005461);
+  color: #ffffff;
+}
+.btn-success {
+  background: linear-gradient(135deg, #0095a8, #005461);
+  color: #ffffff;
+}
+@media (max-width: 600px) {
+  .admin-add-user {
+    padding: 10px;
+  }
+}

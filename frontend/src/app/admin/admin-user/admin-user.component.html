@@ -1,0 +1,57 @@
+<button class="buttons" routerLink="/admin/dashboard"><mat-icon>arrow_backward</mat-icon> Back</button>
+<div *ngIf="user" class="admin-user">
+  <h2> User Management</h2>
+  <div class="card profile-card">
+    <h3>User Profile</h3>
+    <div class="profile-grid">
+      <div>
+        <label>Name</label>
+        <h1>{{ user.name }}</h1>
+      </div>
+      <div>
+        <label>Height (cm)</label>
+        <input type="number" [(ngModel)]="user.height" />
+      </div>
+      <div>
+        <label>Weight (kg)</label>
+        <input type="number" [(ngModel)]="user.weight" />
+      </div>
+    </div>
+    <button class="primary-btn" (click)="saveProfile()">Save Profile</button>
+  </div>
+  <hr />
+  <h3>Workout & Meal Plans</h3>
+  <div class="day-grid">
+    <div *ngFor="let plan of plans" class="card day-card">
+      <h4>{{ plan.day }}</h4>
+      <div class="section-box">
+        <h5>Exercises</h5>
+        <div *ngFor="let ex of plan.exercises" class="exercise-row">
+          <input [(ngModel)]="ex.name" placeholder="Exercise" />
+          <input type="number" [(ngModel)]="ex.sets" placeholder="Sets" />
+          <input type="number" [(ngModel)]="ex.reps" placeholder="Reps" />
+        </div>
+        <button class="secondary-btn" (click)="addExercise(plan)">➕ Add Exercise</button>
+      </div>
+      <div class="section-box">
+        <h5>Meals</h5>
+        <div *ngFor="let meal of plan.meals" class="meal-row">
+           <textarea rows="1"
+            [(ngModel)]="meal.itemsText"
+            placeholder="Items (comma separated)">
+          </textarea>
+          <input [(ngModel)]="meal.type" placeholder="Meal" />
+          <input type="number" [(ngModel)]="meal.calories" placeholder="Cal" />
+        </div>
+        <button class="secondary-btn" (click)="addMeal(plan)">➕ Add Meal</button>
+      </div>
+      <button class="primary-btn save-day" (click)="savePlan(plan)">
+        Save Day Plan
+      </button>
+    </div>
+  </div>
+  <hr />
+  <h3>User Progress</h3>
+    <canvas id="workoutChart"></canvas>
+    <canvas id="calorieChart"></canvas>
+</div>

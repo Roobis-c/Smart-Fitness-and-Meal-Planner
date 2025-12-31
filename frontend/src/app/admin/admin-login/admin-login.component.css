@@ -1,0 +1,68 @@
+.admin-login-container {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 32px;
+  text-align: center;
+  background: #C9C8CD;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+img{
+  height: 200px;
+  width: 200px;
+}
+.admin-login-container h2 {
+  text-align: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 1.7rem;
+  margin-bottom: 50px;
+  font-weight: 800;
+  color: #06535D;
+}
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+.form-group input {
+  width: 80%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: #005461;
+  box-shadow: 0 0 0 2px rgba(0, 84, 97, 0.15);
+}
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #005461;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button
+{
+  margin: 10px;
+  padding: 6px 12px;
+  border: none;
+
+  border-radius: 30px;
+  cursor: pointer;
+  gap: 6px;
+}
+button[type="submit"]:hover {
+  background: #003C46;
+}

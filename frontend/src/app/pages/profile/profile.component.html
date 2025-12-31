@@ -1,0 +1,50 @@
+ <button routerLink="/dashboard" ><mat-icon style="color: white;">arrow_backward</mat-icon> back</button>
+<div class="profile-container">
+  <h1 class="title">Profile</h1>
+  <img src="assets/profile.png" alt="">
+  
+  <div *ngIf="!isEditMode" class="profile-card">
+    <p><mat-icon>person</mat-icon> <b>Name:</b> {{ profile.name || '--' }}</p>
+    <p><mat-icon>calendar_today</mat-icon> <b>Age:</b> {{ profile.age || '--' }}</p>
+    <p><mat-icon>wc</mat-icon> <b>Gender:</b> {{ profile.gender || '--' }}</p>
+    <p><mat-icon>height</mat-icon> <b>Height:</b> {{ profile.height || '--' }} cm</p>
+    <p><mat-icon>fitness_center</mat-icon> <b>Weight:</b> {{ profile.weight || '--' }} kg</p>
+    <p class="goal-box">
+      <mat-icon>flag</mat-icon>
+      <b>Goal:</b> {{ profile.goal || '--' }}
+    </p>
+
+    <button class="primary-btn" (click)="toggleEdit()">Edit Profile</button>
+  </div>
+
+  <form *ngIf="isEditMode" class="profile-card">
+    <label>Name</label>
+    <input type="text" [(ngModel)]="profile.name" name="name">
+
+    <label>Age</label>
+    <input type="number" [(ngModel)]="profile.age" name="age" min="10" max="70">
+
+    <label>Gender</label>
+    <select [(ngModel)]="profile.gender" name="gender">
+      <option value="">Select</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+    <label>Height (cm)</label>
+    <input type="number" [(ngModel)]="profile.height" name="height" min="80" max="220">
+    <label>Weight (kg)</label>
+    <input type="number" [(ngModel)]="profile.weight" name="weight" min="20" max="200">
+    <label>Goal</label>
+    <select [(ngModel)]="profile.goal" name="goal">
+      <option value="">Select</option>
+      <option value="weight_loss">Weight Loss</option>
+      <option value="muscle_gain">Muscle Gain</option>
+      <option value="maintenance">Maintenance</option>
+    </select>
+    <div class="btn-row">
+      <button type="button" class="secondary-btn" (click)="toggleEdit()">Cancel</button>
+      <button type="button" class="primary-btn" (click)="updateProfile()">Save</button>
+    </div>
+  </form>
+</div>

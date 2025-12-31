@@ -1,0 +1,99 @@
+.profile-container {
+  padding: 30px;
+   display: flex;
+   flex-direction: column;
+  align-items: center;      
+  justify-content: center; 
+  font-family: 'Inter', sans-serif;
+}
+img{
+    width: 300px;
+}
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.profile-card {
+  background: white;
+  width: 400px;
+  max-width: 450px;
+  padding: 25px;
+  border-radius: 20px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.profile-card p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.goal-box {
+  background: #eef0ff;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+ select{
+    width: 85%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+ }
+input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.primary-btn {
+  background: #5682B1;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button{
+  margin: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: #5682B1 ;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  gap: 6px;}
+  
+
+.secondary-btn {
+  background: #e3e5ec;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+mat-icon {
+  color: #005461;
+}

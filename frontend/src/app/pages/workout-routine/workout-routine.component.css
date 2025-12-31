@@ -1,0 +1,89 @@
+.workout-container {
+  padding: 30px;
+  background: #ffffff;
+  min-height: 100vh;
+}
+.title {
+  text-align: center;
+  color: #003c46;
+  font-family: 'Syne', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  border: 1px solid #0a2e34;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 20px;
+}
+.day-card {
+  background-color: #c0c1c146;
+  border-radius: 16px;
+  padding: 30px;
+}
+.day-card.completed {
+  background: #c6f7d2;
+}
+.day-card.completed input[type="checkbox"] {
+  accent-color: #4caf50;
+}
+.day-header {
+  font-family: 'Syne', sans-serif;
+}
+
+.day-header h2 {
+  font-size: 1.4rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+.status-tag {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: #e3e5ec;
+  color: #555;
+}
+.status-tag.completed {
+  background: #4caf50;
+  color: #ffffff;
+}
+button {
+  margin: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: #5682b1;
+  color: #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.reset-btn {
+  background: #ff5252;
+}
+.reset-btn:hover {
+  background: #e53935;
+}
+@media (max-width: 768px) {
+  .week-grid {
+    padding: 10px;
+    margin: 0;
+    grid-template-columns: 1fr;
+  }
+}

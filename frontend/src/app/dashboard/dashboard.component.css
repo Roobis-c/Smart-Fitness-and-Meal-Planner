@@ -1,0 +1,159 @@
+.dashboard-container { 
+  padding: 20px;
+  min-height: 100vh;
+ 
+}
+#header-image {
+  width: 190px;
+  border-radius: 12px;
+}
+.dashboard-header {
+  background-color: #005461;
+  padding: 30px;
+  margin: 1px 50px 50px 50px;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 22px;
+}
+.dashboard-header h1 {
+	 font-family: 'Syne', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+.profile-card {
+  padding: 20px;
+    color: #0a2e34;
+  max-width: 200px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #0a2e34;
+}
+.profile-card .info{
+  color: #121212;
+  background-color: #F3F5F7;
+  padding-top: 10px;
+  border-radius: 30px;
+  text-align: center;
+  border: 1px solid #0a2e34;
+}
+ svg{
+  color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+.parent-card1,
+.parent-card2 {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.card p,.card2 p{
+  color: #292b2c94;
+}
+.card {
+  padding: 16px;
+  border-radius: 30px;
+  background-color: #c0c1c146;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin-bottom: 20px;
+}
+.card img {
+  max-width: 250px;
+}
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.card2 {
+  padding: 16px;
+  border-radius: 30px;
+  background-color: #c0c1c146;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.card2 img {
+  width: 200px;
+}
+button {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  background-color:#5682B1;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  width: fit-content;
+}
+button:hover {
+  background-color:#2b616a;
+  color: white;
+}
+mat-icon {
+  vertical-align: middle;
+  margin-right: 8px;
+  color: #0a2e34;
+}
+@media (max-width: 768px) {
+
+  .dashboard-container {
+    padding: 10px;
+	margin: 0;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+	  margin: 1px 5px 10px 5px;
+
+  }
+
+  #header-image {
+    display: none;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .parent-card1,
+  .parent-card2 {
+    flex-direction: column;
+  }
+
+  .profile-card {
+    max-width: 85%;
+      margin-top: 10px;
+
+  }
+
+  .card,
+  .card2 {
+    flex-direction: column;
+    text-align: center;
+	margin-bottom: 20px;
+  }
+
+  .card img,
+  .card2 img {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

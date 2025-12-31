@@ -1,0 +1,26 @@
+<button routerLink="/dashboard"> <mat-icon>arrow_backward</mat-icon>Back</button>
+<button routerLink="/meals"><mat-icon>restaurant</mat-icon> Meals</button>
+<div class="workout-container">
+   <h1 class="title">7 Day Workout Plan <mat-icon>fitness_center</mat-icon></h1>
+  <div class="week-grid">
+    <div class="day-card" *ngFor="let day of workoutPlan" [class.completed]="isDayCompleted(day)">
+      <div class="day-header">
+        <h2>{{ day.day }}</h2>
+      </div>
+      <ul>
+        <li *ngFor="let ex of day.exercises">
+          <input type="checkbox" [ngModel]="ex.completed" (ngModelChange)="updateExercise(day.day, ex, $event)"/>
+          {{ ex.name }} — {{ ex.sets }} x {{ ex.reps }}
+        </li> 
+      </ul>
+      <span class="status-tag" [class.completed]="isDayCompleted(day)">
+        {{ isDayCompleted(day) ? 'Completed' : 'Pending' }}
+      </span>
+    </div>
+  </div>
+<button class="reset-btn" (click)="resetWeek()">
+    <mat-icon>restart_alt</mat-icon>
+    Reset Entire Week
+  </button>
+
+</div>

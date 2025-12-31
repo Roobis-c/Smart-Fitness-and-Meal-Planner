@@ -1,0 +1,196 @@
+<div class="fitLearn">
+<div *ngIf="!goal" class="loading">
+  <p>Loading fitness content...</p>
+</div>
+ <button routerLink="/dashboard"> <mat-icon>arrow_backward</mat-icon>Back</button><p class="tag">{{userName}}</p>
+<p class="tag"> Height : {{height}}</p>
+<p class="tag">Weight : {{weight}}</p>
+<!-- WEIGHT LOSS -->
+   
+
+    <h1 *ngIf="goal==='maintenance'"> MAINTENANCE</h1>
+    <h1 *ngIf="goal==='muscle_gain'">GAIN MUSCLE</h1>
+<h1 *ngIf="goal==='weight_loss'">WEIGHT LOSS</h1>
+
+<section *ngIf="goal === 'weight_loss'" class="learn-section">
+   
+
+
+  <div class="video-grid">
+<iframe  src="https://www.youtube.com/embed/q42n27oCOUM?si=DDPH-McwwrJQ8IrV&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+<iframe  src="https://www.youtube.com/embed/RfSyTOyih2s?si=xfEnVt14n1FkOao8&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+<iframe  src="https://www.youtube.com/embed/ZGTMUwEDBu4?si=si_ohmmKWVSE4wGR&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+  <h2>Expert Advice</h2>
+  <div class="advice-grid">
+
+  <div class="advice-card">
+    <h3>Calorie Deficit</h3>
+    <p>Consume fewer calories than you burn daily.</p>
+    <p>Track your calorie intake using an app or food diary.</p>
+    <p>Reduce portion sizes instead of skipping meals.</p>
+    <p>Avoid sugary drinks and fried foods.</p>
+    <p>Maintain a moderate deficit of 300–500 calories.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Hydration</h3>
+    <p>Drink 2–3 liters of water every day.</p>
+    <p>Start your day with a glass of water.</p>
+    <p>Drink water before meals to reduce overeating.</p>
+    <p>Carry a water bottle throughout the day.</p>
+    <p>Increase water intake during workouts.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Daily Activity</h3>
+    <p>Increase steps and avoid long sitting.</p>
+    <p>Aim for 7,000–10,000 steps per day.</p>
+    <p>Take stairs instead of elevators.</p>
+    <p>Stretch or walk every hour.</p>
+    <p>Stay active even on rest days.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Balanced Meals</h3>
+    <p>Eat protein, fiber, and healthy fats.</p>
+    <p>Include lean protein like eggs, chicken, or legumes.</p>
+    <p>Add vegetables and fruits to every meal.</p>
+    <p>Choose healthy fats like nuts and olive oil.</p>
+    <p>Avoid processed and junk foods.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Sleep</h3>
+    <p>Sleep 7–8 hours for better fat loss.</p>
+    <p>Maintain a consistent sleep schedule.</p>
+    <p>Avoid screens before bedtime.</p>
+    <p>Reduce caffeine in the evening.</p>
+    <p>Good sleep improves metabolism and recovery.</p>
+  </div>
+
+</div>
+
+</section>
+
+<!-- MUSCLE GAIN -->
+<section *ngIf="goal === 'muscle_gain'" class="learn-section">
+
+  <div class="video-grid">
+<iframe  src="https://www.youtube.com/embed/o9zCgPtsups?si=ea8LGSEkZsxAJGec&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe  src="https://www.youtube.com/embed/2tM1LFFxeKg?si=fjFSbLN2J2yO9GwA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe  src="https://www.youtube.com/embed/ctV8NyRWZIo?si=j61j5Jl3oAiEadNu&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+</div>
+
+  <h2>Expert Advice</h2>
+  <div class="advice-grid">
+
+  <div class="advice-card">
+    <h3>Protein Intake</h3>
+    <p>Eat enough protein to support muscle growth.</p>
+    <p>Aim for 1.6–2.2g of protein per kg of body weight.</p>
+    <p>Include protein in every meal.</p>
+    <p>Choose sources like eggs, chicken, fish, paneer, and legumes.</p>
+    <p>Post-workout protein helps muscle recovery.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Progressive Overload</h3>
+    <p>Increase weight or reps gradually.</p>
+    <p>Add small weight increments over time.</p>
+    <p>Increase repetitions or sets weekly.</p>
+    <p>Improve exercise form before adding weight.</p>
+    <p>Track workouts to ensure progression.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Rest Days</h3>
+    <p>Muscles grow during recovery.</p>
+    <p>Take at least 1–2 rest days per week.</p>
+    <p>Avoid training the same muscle daily.</p>
+    <p>Use rest days for stretching or light activity.</p>
+    <p>Good recovery prevents injuries and burnout.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Compound Exercises</h3>
+    <p>Focus on squats, deadlifts, bench press.</p>
+    <p>Include rows, overhead press, and pull-ups.</p>
+    <p>Compound lifts train multiple muscles at once.</p>
+    <p>They help build strength faster.</p>
+    <p>Perform them early in your workout.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Consistency</h3>
+    <p>Train regularly for best results.</p>
+    <p>Follow a structured workout plan.</p>
+    <p>Avoid skipping workouts frequently.</p>
+    <p>Stay patient—muscle growth takes time.</p>
+    <p>Small daily efforts lead to long-term gains.</p>
+  </div>
+
+</div>
+</section>
+
+<!--MAINTENANCE -->
+<section *ngIf="goal === 'maintenance'" class="learn-section">
+
+  <div class="video-grid">
+    <iframe  src="https://www.youtube.com/embed/o9zCgPtsups?si=pYnX7V5picH9pK36&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe  src="https://www.youtube.com/embed/vskbGlJ6ZY8?si=cb4JAB_G6iILbBx-&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe  src="https://www.youtube.com/embed/EOh2R-89qqg?si=HDrxPbH9PA5s2dJp&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <h2>Expert Advice</h2>
+ <div class="advice-grid">
+
+  <div class="advice-card">
+    <h3>Stay Active</h3>
+    <p>Move your body every day.</p>
+    <p>Engage in at least 30 minutes of physical activity.</p>
+    <p>Include walking, stretching, or light workouts.</p>
+    <p>Avoid long periods of sitting.</p>
+    <p>Daily movement improves energy and mood.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Balanced Diet</h3>
+    <p>Maintain healthy eating habits.</p>
+    <p>Eat a mix of carbohydrates, proteins, and fats.</p>
+    <p>Include fresh fruits and vegetables daily.</p>
+    <p>Limit processed foods and sugary snacks.</p>
+    <p>Drink enough water throughout the day.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Mixed Training</h3>
+    <p>Combine cardio and strength workouts.</p>
+    <p>Do cardio exercises for heart health.</p>
+    <p>Add strength training for muscle development.</p>
+    <p>Alternate workouts to avoid monotony.</p>
+    <p>Balance training with adequate recovery.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Mental Health</h3>
+    <p>Manage stress and stay positive.</p>
+    <p>Practice meditation or deep breathing.</p>
+    <p>Get quality sleep every night.</p>
+    <p>Take breaks when feeling overwhelmed.</p>
+    <p>A healthy mind supports overall wellness.</p>
+  </div>
+
+  <div class="advice-card">
+    <h3>Sustainability</h3>
+    <p>Build habits you can follow long term.</p>
+    <p>Set realistic and achievable goals.</p>
+    <p>Avoid extreme diets or intense routines.</p>
+    <p>Focus on consistency over perfection.</p>
+    <p>Make fitness a lifestyle, not a short-term goal.</p>
+  </div>
+
+</div>
+
+</section>
+</div>

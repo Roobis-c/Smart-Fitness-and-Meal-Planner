@@ -1,0 +1,122 @@
+.meal-container {
+  padding: 30px;
+  min-height: 100vh;
+  user-select: none;
+}
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: 3rem;
+  color:  #003C46;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+.day-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 60px;
+}
+.day-tabs button {
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid #0a2e34;
+  background: #f4f6fa;
+  font-weight: 600;
+  cursor: pointer;
+}
+.day-tabs button.active {
+  background: #2b616a;
+  color: white;
+}
+.meal-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  border: 1px solid #0a2e34;
+  padding: 20px;
+  border-radius: 30px;
+  gap: 20px;
+}
+.meal-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  transition: 0.2s ease;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 10px; 
+}
+
+img {
+  width:100px;
+  display: flex;
+  border-radius: 14px;
+}
+.meal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ h3 {
+  font-size: 1.7rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+}
+.meal-header span {
+  font-weight: 700;
+  color: #555;
+}
+ul {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+li {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.meal-card.completed {
+  border: 2px solid #4caf50;
+  background: linear-gradient(135deg, #f0fff4, #e8f9ee);
+  box-shadow: 0 10px 25px rgba(76, 175, 80, 0.25);
+  transform: scale(1.02);
+}
+.meal-card.completed input[type="checkbox"] {
+  accent-color: #4caf50;
+}
+.meal-card.completed h3,
+.meal-card.completed span {
+  color: #2e7d32;
+}
+.meal-card.completed .complete-btn {
+  background: #4caf50;
+  color: white;
+  cursor: default;
+}
+.reset-btn {
+  margin: 50px 0;
+  padding: 6px 14px;
+  background: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.buttons{
+  margin: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: #5682B1 ;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  gap: 6px;}
+.reset-btn:hover {
+  background: #e53935;
+}
+@media (max-width: 768px) {
+  .day-tabs{
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,72 @@
+.tracker-container {
+  padding: 20px;
+}
+#title{
+  font-family: 'Syne', sans-serif;
+  color: #003C46;
+  font-weight: 800;
+  font-size: 3rem;
+}
+h1{
+  text-align: center;
+  color: #2b616a;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+
+}
+.card {
+  background-color: #c0c1c146;
+  padding: 30px;
+  margin-bottom: 100px;
+  border-radius: 12px;
+}
+.chart-card h3 {
+  margin-bottom: 12px;
+}
+canvas {
+  width: 100% !important;
+  max-height: 350px;
+  
+}
+.heatmap {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.heat-box {
+  flex: 1;
+  padding: 18px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
+  opacity: 0.4;
+  transition: 0.3s ease;
+}
+.heat-box.active {
+  opacity: 1;
+  transform: scale(1.03);
+}
+.buttons{
+  margin: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: #5682B1 ;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  gap: 6px;}
+  
+@media (max-width: 768px) {
+h1{
+  font-size: 1rem;
+}
+
+#title{
+  margin-bottom: 60px;
+  font-size: 1.6rem;
+  
+}
+.card{
+  margin-bottom: 30px;
+}
+}

@@ -1,0 +1,32 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <button class="buttons" routerLink=""><mat-icon>arrow_backward</mat-icon></button>
+
+    <h1>Create Account</h1>
+
+    <form (ngSubmit)="onRegister()">
+      <div class="input-group">
+        <input type="text" [(ngModel)]="name" name="name" required   placeholder="Name"/>
+      </div>
+
+      <div class="input-group">
+        <input type="email" [(ngModel)]="email" name="email" required  placeholder="Email"/>
+      </div>
+
+      <div class="input-group">
+        <input type="password" [(ngModel)]="password" name="password" required placeholder="Password" />
+      </div>
+
+      <div class="input-group">
+        <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required placeholder="Confirm Password" />
+      </div>
+
+      <button type="submit" class="btn-primary">Register</button>
+    </form>
+
+    <p class="switch">
+      Already have an account?
+      <a routerLink="/login">Login</a>
+    </p>
+  </div>
+</div>

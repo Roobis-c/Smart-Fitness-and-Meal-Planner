@@ -1,0 +1,9 @@
+
+html, body { height: 100%; }
+body {
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  cursor: url('/assets/cursorr.png'), auto;
+}
+button:hover,a:hover,.info:hover,input[type="checkbox"]:hover {
+  cursor: url('/assets/pointe.png') 8 0, pointer !important;}
+

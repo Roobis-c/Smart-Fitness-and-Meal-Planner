@@ -1,0 +1,36 @@
+ <button class="buttons" routerLink="/dashboard"> <mat-icon>arrow_backward</mat-icon>Back</button>
+  <button class="buttons" routerLink="/workouts"><mat-icon>fitness_center</mat-icon>Workout</button>
+<div class="meal-container">
+  <h1 class="title">7 Day Meal Plan <mat-icon>restaurant</mat-icon></h1>
+  <div class="day-tabs">
+    <button *ngFor="let d of mealPlan"
+            (click)="selectDay(d.day)"
+            [class.active]="selectedDay === d.day">
+      {{ d.day }}
+    </button>
+  </div>
+  <div *ngIf="currentDay?.meals">
+    <h3>
+      Target: {{ currentDay.targetCalories}} kcal 
+    </h3>
+  <div class="meal-cards">
+    <div class="meal-card"
+     *ngFor="let meal of currentDay.meals.meals"
+     [class.completed]="meal.completed">
+     <label>
+        <input type="checkbox"
+               [checked]="meal.completed"
+               (change)="toggleMeal(currentDay.day, meal)">
+        <strong>{{ meal.type }}</strong> — {{ meal.calories }} kcal
+      </label>  
+      <ul>
+        <li *ngFor="let item of meal.items">{{ item }}</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+<button class="reset-btn" (click)="resetWeek()">
+  <mat-icon>restart_alt</mat-icon>
+  Reset Entire Week
+</button>
+</div>

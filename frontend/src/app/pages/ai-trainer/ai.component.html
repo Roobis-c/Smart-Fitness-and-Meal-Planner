@@ -1,0 +1,32 @@
+ <button class="backbtn" routerLink="/dashboard" ><mat-icon>arrow_backward</mat-icon>Back</button>
+<div class="chatbot-container">
+  <h2>  AI Fitness Assistant <mat-icon>chat</mat-icon></h2> 
+  <div class="chat-window">
+    <div *ngFor="let msg of messages"
+         class="message"
+         [ngClass]="msg.role">
+      <p *ngIf="msg.role === 'user'">
+        {{ msg.text }}
+      </p>
+      <div *ngIf="msg.role === 'bot'" [innerHTML]="msg.html"></div>
+      <button *ngIf="msg.role === 'bot'"
+              class="copy-btn"
+              (click)="copy(msg.text)">
+        <mat-icon>content_copy</mat-icon> Copy
+      </button>
+    </div>
+    <p *ngIf="loading" class="typing">
+      AI is typing...
+    </p>
+  </div>
+  <button class="dlt-btn"  (click)="clearChat()">
+  <mat-icon>delete</mat-icon>
+</button>
+  <div class="chat-input">
+    <input
+      [(ngModel)]="userMessage"
+      placeholder="Ask about workout, diet, BMI, calories..."
+      (keydown.enter)="sendMessage()" />
+    <button (click)="sendMessage()"><mat-icon>send</mat-icon></button>
+  </div>
+</div>

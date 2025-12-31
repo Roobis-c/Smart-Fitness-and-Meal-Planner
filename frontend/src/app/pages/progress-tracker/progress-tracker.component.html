@@ -1,0 +1,35 @@
+<button class="buttons" routerLink="/dashboard"> <mat-icon>arrow_backward</mat-icon>Back</button>
+
+<div class="tracker-container">
+  <h2 id="title">Progress Tracker</h2>
+
+  <div class="card">
+    <h1>Daily Workout</h1>
+    <canvas id="workoutChart"></canvas>
+  </div>
+
+  <div class="card">
+    <h1>Weekly Calories</h1>
+    <p>Weekly Target : {{targetCalories}}</p>
+    <p>Avg Daily Target : {{targetCalories/7}}</p>
+
+    <canvas id="calorieChart"></canvas>
+  </div>
+
+  <div class="card">
+  <h1>BMI Heat Map</h1>
+  <p><strong>BMI:</strong> {{ bmiValue }} ({{ bmiStatus }})</p>
+
+  <div class="heatmap">
+    <div
+      *ngFor="let zone of bmiHeatData"
+      class="heat-box"
+      [class.active]="zone.active"
+      [style.background]="zone.active ? zone.color : '#eeeeee'"
+    >
+      {{ zone.label }}
+    </div>
+  </div>
+</div>
+
+</div>

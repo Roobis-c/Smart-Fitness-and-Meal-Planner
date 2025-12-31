@@ -1,0 +1,88 @@
+<button class="backbtn" routerLink="/admin/dashboard"><mat-icon>arrow_backward</mat-icon>Back</button>
+<div class="admin-add-user">
+  <div class="page-header">
+    <h2>Add New User</h2>
+    <p>Create a user account and assign fitness goals</p>
+  </div>
+
+  <div class="steps">
+    <div class="step active">1</div>
+    <div class="step" [class.active]="profile.userId">2</div>
+  </div>
+
+  <div class="card">
+    <h3>Step 1: Create User</h3>
+    <div class="form-grid">
+      <input
+        type="text"
+        placeholder="Name"
+        [(ngModel)]="basicUser.name"
+        required
+      />
+
+      <input
+        type="email"
+        placeholder="Email"
+        [(ngModel)]="basicUser.email"
+        required
+      />
+
+      <input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="basicUser.password"
+        required        />
+    </div>
+
+    <div class="action-row">
+      <button class="btn-primary" (click)="createUser()">
+        Create User
+      </button>
+    </div>
+  </div>
+
+  
+  
+  <div class="card" *ngIf="profile.userId">
+    <h3>Step 2: User Profile & Goal</h3>
+
+    <div class="form-grid">
+      <input
+        type="number"
+        placeholder="Age"
+        [(ngModel)]="profile.age"
+      />
+
+      <select [(ngModel)]="profile.gender">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <input
+        type="number"
+        placeholder="Height (cm)"
+        [(ngModel)]="profile.height"
+      />
+
+      <input
+        type="number"
+        placeholder="Weight (kg)"
+        [(ngModel)]="profile.weight"
+      />
+
+      <select [(ngModel)]="profile.goal">
+        <option value="weight_loss">Weight Loss</option>
+        <option value="muscle_gain">Muscle Gain</option>
+        <option value="maintenance">Maintenance</option>
+      </select>
+    </div>
+
+    <div class="action-row">
+      <button class="btn-primary" (click)="saveProfile()">
+        Save Profile
+      </button>
+    </div>
+  </div>
+
+</div>

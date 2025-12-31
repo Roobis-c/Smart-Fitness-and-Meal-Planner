@@ -1,0 +1,134 @@
+.fitLearn{
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  padding: 60px;
+  color: #555;
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 10px;
+  color: #005461;
+}
+.tag {
+  display: inline-flex;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #005461;
+  margin: 10px 5px;
+  background: rgba(0, 84, 97, 0.08);
+  border: 1px solid #005461;
+  border-radius: 999px;
+}
+button{
+  margin: 10px 5px;
+  padding: 6px 12px;
+  border: none;
+  background: #5682B1 ;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  gap: 6px;}
+  
+
+.learn-section {
+  padding: 30px;
+  border-radius: 18px;
+  margin-bottom: 40px;
+}
+
+.learn-section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  margin: 30px 0 15px;
+  padding-left: 12px;
+  color: #333;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.video-grid iframe {
+  width: 450px;
+  height: 300px;
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.video-grid iframe:hover {
+  transform: scale(1.03);
+}
+
+.advice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+  margin-top: 15px;
+}
+
+.advice-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #005461;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advice-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.advice-card h3 {
+  color: #005461;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.advice-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin: 4px 0;
+}
+
+.advice-card p::before {
+  content: "⨀ ";
+  font-weight: bold;
+  color: #005461;
+}
+
+@media (max-width: 768px) {
+  .tag {
+flex-direction: column;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+
+  .learn-section {
+    padding: 20px;
+  }
+
+  .video-grid iframe {
+    height: 180px;
+    width: 300px;
+  }
+
+  .advice-grid {
+    grid-template-columns: 1fr;
+  }
+}
