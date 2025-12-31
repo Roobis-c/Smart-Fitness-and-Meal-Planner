@@ -226,11 +226,6 @@ CREATE TABLE workout_meal_plans (
 | PUT    | /api/meals/meal       | Update meal completion and consumed calories |
 | PUT    | /api/meals/reset-week | Reset weekly meal progress                   |
 
-### 📊 Dashboard API
-
-| Method | API Route      | Purpose                                        |
-| ------ | -------------- | ---------------------------------------------- |
-| GET    | /api/dashboard | Get BMI, workout progress, and calorie summary |
 
 ### 🤖 AI Integration API
 
