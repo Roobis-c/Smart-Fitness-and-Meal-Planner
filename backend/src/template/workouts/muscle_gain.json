@@ -1,0 +1,90 @@
+{
+  "goal": "muscle_gain",
+  "week": "Week 1",
+  "workoutPlan": [
+    {
+      "day": "Monday",
+      "focus": "Chest & Triceps",
+      "exercises": [
+        { "name": "Barbell Bench Press", "sets": 4, "reps": 8 },
+        { "name": "Incline Dumbbell Press", "sets": 3, "reps": 10 },
+        { "name": "Chest Fly", "sets": 3, "reps": 12 },
+        { "name": "Dips", "sets": 3, "reps": 10 },
+        { "name": "Triceps Pushdown", "sets": 3, "reps": 12 },
+        { "name": "Overhead Triceps Extension", "sets": 3, "reps": 10 }
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "focus": "Back & Biceps",
+      "exercises": [
+        { "name": "Deadlift", "sets": 4, "reps": 6 },
+        { "name": "Pull-ups", "sets": 3, "reps": 8 },
+        { "name": "Lat Pulldown", "sets": 3, "reps": 10 },
+        { "name": "Seated Cable Row", "sets": 3, "reps": 10 },
+        { "name": "Barbell Curl", "sets": 3, "reps": 10 },
+        { "name": "Hammer Curl", "sets": 3, "reps": 12 }
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "focus": "Legs",
+      "exercises": [
+        { "name": "Back Squats", "sets": 4, "reps": 8 },
+        { "name": "Leg Press", "sets": 3, "reps": 12 },
+        { "name": "Walking Lunges", "sets": 3, "reps": 12 },
+        { "name": "Leg Extension", "sets": 3, "reps": 12 },
+        { "name": "Leg Curl", "sets": 3, "reps": 12 },
+        { "name": "Standing Calf Raises", "sets": 4, "reps": 15 }
+      ]
+    },
+    {
+      "day": "Thursday",
+      "focus": "Shoulders",
+      "exercises": [
+        { "name": "Overhead Barbell Press", "sets": 4, "reps": 8 },
+        { "name": "Lateral Raises", "sets": 3, "reps": 12 },
+        { "name": "Front Raises", "sets": 3, "reps": 12 },
+        { "name": "Rear Delt Fly", "sets": 3, "reps": 12 },
+        { "name": "Arnold Press", "sets": 3, "reps": 10 },
+        { "name": "Barbell Shrugs", "sets": 3, "reps": 15 }
+      ]
+    },
+    {
+      "day": "Friday",
+      "focus": "Arms (Biceps & Triceps)",
+      "exercises": [
+        { "name": "Close-Grip Bench Press", "sets": 3, "reps": 8 },
+        { "name": "EZ Bar Curl", "sets": 3, "reps": 10 },
+        { "name": "Skull Crushers", "sets": 3, "reps": 10 },
+        { "name": "Incline Dumbbell Curl", "sets": 3, "reps": 12 },
+        { "name": "Cable Rope Pushdown", "sets": 3, "reps": 12 },
+        { "name": "Concentration Curl", "sets": 3, "reps": 10 }
+      ]
+    },
+    {
+      "day": "Saturday",
+      "focus": "Core & Stability",
+      "exercises": [
+        { "name": "Hanging Leg Raises", "sets": 3, "reps": 12 },
+        { "name": "Cable Crunch", "sets": 3, "reps": 15 },
+        { "name": "Plank", "sets": 3, "duration": "45 sec" },
+        { "name": "Russian Twists", "sets": 3, "reps": 20 },
+        { "name": "Back Extensions", "sets": 3, "reps": 12 },
+        { "name": "Ab Wheel Rollouts", "sets": 3, "reps": 10 }
+      ]
+    },
+    {
+      "day": "Sunday",
+      "focus": "Active Recovery",
+      "exercises": [
+        { "name": "Light Cardio (Walking/Cycling)", "duration": "20 min" },
+        { "name": "Dynamic Stretching", "duration": "10 min" },
+        { "name": "Foam Rolling", "duration": "10 min" },
+        { "name": "Mobility Drills", "duration": "10 min" },
+        { "name": "Core Activation", "sets": 2, "reps": 15 },
+        { "name": "Breathing Exercises", "duration": "5 min" }
+      ]
+    }
+  ]
+}
