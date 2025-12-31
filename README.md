@@ -183,12 +183,6 @@ CREATE TABLE workout_meal_plans (
 
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
-
-
-
-
-
-
 ```
 
 ---
