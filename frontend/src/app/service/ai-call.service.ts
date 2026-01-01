@@ -4,9 +4,9 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({ providedIn: 'root' })
 export class ChatAiService {
 
-  private API_KEY = 'AIzaSyBMrhqK77E8huUZLaMYQlr-alByymIso7o';
+  private ai_chat = 'AIzaSyBMrhqK77E8huUZLaMYQlr-alByymIso7o';
   private URL =
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${this.API_KEY}`;
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${this.ai_chat}`;
 
   constructor(private http: HttpClient) {}
 
@@ -47,4 +47,5 @@ ${question}
     });
   }
 }
+
 
