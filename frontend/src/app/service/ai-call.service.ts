@@ -1,14 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { ApiService } from './api.service';
+import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class ChatAiService {
 
-  private ai_chat = 'AIzaSyBMrhqK77E8huUZLaMYQlr-alByymIso7o';
-  private URL =
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${this.ai_chat}`;
-
-  constructor(private http: HttpClient) {}
+  constructor(private api: ApiService) {}
 
   askDoubt(
     question: string,
@@ -18,34 +15,10 @@ export class ChatAiService {
       bmi: number;
       goal: string;
     }
-  ) {
-
-    const prompt = `
-You are a professional fitness assistant.
-
-USER PROFILE:
-- Height: ${userContext.height} cm
-- Weight: ${userContext.weight} kg
-- BMI: ${userContext.bmi}
-- Goal: ${userContext.goal}
-
-INSTRUCTIONS:
-- Respond in Markdown
-- Simple and short
-- Use headings and bullet points
-- Be clear and practical
-- Avoid medical diagnosis
-
-USER QUESTION:
-${question}
-`;
-
-    return this.http.post<any>(this.URL, {
-      contents: [
-        { parts: [{ text: prompt }] }
-      ]
+  ): Observable<any> {
+    return this.api.post('/ai/ask-ai', {
+      question,
+      userContext
     });
   }
 }
-
-
