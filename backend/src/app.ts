@@ -6,7 +6,7 @@ import workoutRoutes from './routes/workout.routes';
 import mealRoutes from './routes/meals.routes';
 import trackerRoutes from './routes/progress.routes';
 import adminRoutes from './routes/admin.routes';
-
+import aiRoutes from './routes/ai.routes';
 
 
 
@@ -36,4 +36,6 @@ app.use('/api/tracker', trackerRoutes);
 app.use('/api/meals', mealRoutes);
 app.use('/api/workouts', workoutRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/ai', aiRoutes);
 export default app;
+
