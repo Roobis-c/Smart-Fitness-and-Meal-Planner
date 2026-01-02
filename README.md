@@ -46,6 +46,16 @@ A **full-stack fitness management web application** designed to help users track
 * Express‑Session (authentication)
 
 ---
+##  🏗️ Project Architecture
+<div align="center">
+  <img width="620" height="400" alt="architecture" src="https://github.com/user-attachments/assets/417130c1-3431-4e0d-bf59-38adbb6bca7a" />
+</div>
+
+
+
+
+
+
 
 ## 📂 Project Structure
 
@@ -231,6 +241,7 @@ CREATE TABLE workout_meal_plans (
 
 | Method | API Route                                                                                                                                                                            | Purpose                                      |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- |
+| POST   | /api/ask-ai | Request the backend to communicate with AI |
 | POST   | [https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent](https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent) | AI-based fitness guidance using user profile |
 
 
