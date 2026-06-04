@@ -245,7 +245,7 @@ CREATE TABLE workout_meal_plans (
 | POST   | [https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent](https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent) | AI-based fitness guidance using user profile |
 
 
-*Thank you
+###Thank you
 
 
 
